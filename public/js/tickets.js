@@ -93,11 +93,14 @@ function renderTickets(tickets) {
       ? 'badge-prioridade-media' 
       : 'badge-prioridade-baixa';
 
+    const ticketCode = `#TK-${t.id.slice(0, 5).toUpperCase()}`;
+
     return `
       <div class="ticket-card" onclick="openDetailModal('${t.id}')">
         <div>
           <div class="ticket-header">
             <h3 class="ticket-title">${escapeHtml(t.titulo)}</h3>
+            <span class="ticket-id">${ticketCode}</span>
           </div>
 
           <div class="badges-group">
@@ -117,7 +120,7 @@ function renderTickets(tickets) {
 
           ${isAdmin ? `
             <div class="ticket-actions" onclick="event.stopPropagation()">
-              <label style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:var(--color-mid-gray);">Alterar Status:</label>
+              <label style="font-size:0.7rem; font-weight:700; text-transform:uppercase; color:var(--text-muted);">Status:</label>
               <select class="status-select-admin" onchange="quickUpdateStatus('${t.id}', this.value)">
                 <option value="Aberto" ${t.status === 'Aberto' ? 'selected' : ''}>Aberto</option>
                 <option value="Em Atendimento" ${t.status === 'Em Atendimento' ? 'selected' : ''}>Em Atendimento</option>
@@ -201,7 +204,7 @@ function openDetailModal(ticketId) {
   const user = getUser();
   const isAdmin = user && user.role === 'admin';
 
-  document.getElementById('detailTitle').textContent = ticket.titulo;
+  document.getElementById('detailTitle').textContent = `#TK-${ticket.id.slice(0, 5).toUpperCase()} — ${ticket.titulo}`;
   document.getElementById('detailDescription').textContent = ticket.descricao;
   document.getElementById('detailAuthor').textContent = `${ticket.usuarioNome} (${ticket.usuarioEmail || 'comum'})`;
   document.getElementById('detailDate').textContent = formatDate(ticket.dataCriacao);
