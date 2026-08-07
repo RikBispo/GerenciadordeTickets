@@ -1,0 +1,16 @@
+[
+  {
+    "id": "admin-0000-0000-0000-000000000000",
+    "nome": "Administrador IT",
+    "email": "admin@empresa.com",
+    "senha": "$2a$10$TrSRdI0UHPa/HCuQPq5ve.aK7psarL2MHXHlzhY5MgDvOdZmkeoMW",
+    "role": "admin"
+  },
+  {
+    "id": "9b76508c-c4e4-4e43-ba2e-8c2d4bf1215c",
+    "nome": "rik",
+    "email": "rik@empresa.com",
+    "senha": "$2a$10$NGApc.yf0xenW6Sit/1MQ.domR/gktBgLNGucyJ1iTM5TbC.Qz43a",
+    "role": "comum"
+  }
+]

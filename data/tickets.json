@@ -1,0 +1,12 @@
+[
+  {
+    "id": "a7ba7915-24a6-45f5-9865-ecd910600106",
+    "usuarioId": "admin-0000-0000-0000-000000000000",
+    "titulo": "Monitor quebrado",
+    "descricao": "Monitor está com a tela preta",
+    "categoria": "Hardware",
+    "prioridade": "Baixa",
+    "status": "Concluído",
+    "dataCriacao": "2026-08-06T23:35:09.388Z"
+  }
+]

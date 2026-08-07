@@ -1,0 +1,29 @@
+{
+  "name": "ticketeria-corporativa",
+  "version": "1.0.0",
+  "description": "Sistema de Gestão de Chamados de TI (ITSM / Help Desk)",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "helpdesk",
+    "tickets",
+    "itsm",
+    "jwt",
+    "vanilla-js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^10.0.0"
+  }
+}
