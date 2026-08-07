@@ -1,4 +1,6 @@
-# 🎟️ Ticketeria Corporativa (Sistema de Gestão de Chamados de TI / ITSM)
+# 🎟️ Gerenciador de Tickets - Ticketeria Corporativa de TI
+
+Gerenciador de tickets de TI desenvolvido nas aulas do SENAI.
 
 Uma aplicação full-stack robusta, moderna e de alto desempenho para gestão de chamados de suporte de TI (Help Desk / ITSM). Desenvolvida com backend em **Node.js + Express**, persistência assíncrona em arquivos **JSON** locais e frontend em **HTML5, CSS3 (Vanilla) e JavaScript Vanilla**.
 
@@ -111,7 +113,6 @@ cd "c:\Users\Aluno\Desktop\Aula 06-08"
 ```bash
 npm install
 ```
-*(Caso ocorra erro de política de execução do PowerShell no Windows, utilize: `cmd /c npm install`)*
 
 ### 3. Configurar as Variáveis de Ambiente
 O arquivo `.env` já vem pré-configurado na raiz do projeto:
@@ -124,34 +125,9 @@ JWT_SECRET=ticketeria_corporativa_secret_key_2026_itsm_secure
 ```bash
 npm start
 ```
-ou em modo de desenvolvimento:
-```bash
-npm run dev
-```
 
 ### 5. Acessar no Navegador
 Abra o seu navegador e acesse:
 ```
 http://localhost:3000
 ```
-
----
-
-## 🧪 Testando o Fluxo Completo
-
-1. **Acesse como Admin**:
-   - Faça login com `admin@empresa.com` / `admin123`.
-   - Crie um novo chamado de TI (ex: *"Servidor de E-mail Indisponível"*, Prioridade *"Alta"*).
-   - Observe as métricas do painel sendo atualizadas em tempo real.
-
-2. **Cadastre um Usuário Comum**:
-   - Clique em **Sair** no canto superior direito.
-   - Alterne para a aba **Cadastrar** e crie uma nova conta (ex: `joao@empresa.com` / `senha123`).
-   - Faça login com o novo usuário.
-   - Crie um chamado (ex: *"Teclado com tecla prendendo"*).
-   - Observe que você **não** consegue visualizar o chamado do admin, nem alterar status ou excluir chamados.
-
-3. **Volte com o Admin**:
-   - Faça login novamente como `admin@empresa.com` / `admin123`.
-   - Você verá todos os chamados (o do Admin e o do João).
-   - Altere o status do chamado do João para **"Em Atendimento"** ou **"Concluído"**.
